@@ -192,6 +192,11 @@ void maximisation(struct simplexe *s){
         }
         printf("\n");
     }  
+    printf("solution optimale: \n");
+    printf("(%f , %f) de valeur %f\n",s->tableau[1][s->nb_iter],
+            s->tableau[2][s->nb_iter],s->var1[s->contraintes[s->nb_contraintes-1]]*
+            s->tableau[1][s->nb_iter]+s->var2[s->contraintes[s->nb_contraintes-1]]*
+            s->tableau[2][s->nb_iter]);
 
     s = update_matrice(s); 
     // itération
